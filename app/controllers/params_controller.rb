@@ -24,4 +24,9 @@ class ParamsController < ApplicationController
      # render json: "hey your name doesnt start with the first letter of the alphabet"
     #end
   #end
+  def segment_params
+    input_value = params["this_is_a_variable"]
+    input_value2 = params["wildcard"]
+    render json: {message: "the url segment is #{input_value} and #{input_value2}"}
+  end
 end
