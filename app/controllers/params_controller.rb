@@ -36,8 +36,8 @@ class ParamsController < ApplicationController
   end
   def game_segment_params
     winning_number = 30
-    input_value = params["number_1"]
-    input_value2 = params["number_2"]
+    input_value = params[:number_1]
+    input_value2 = params[:number_2]
     guess = input_value.to_i + input_value2.to_i
     if guess > winning_number
       output_message = "guess lower"
